@@ -1,4 +1,7 @@
-FROM ubuntu:latest
-LABEL authors="roman"
+FROM node:18.17.1
 
-ENTRYPOINT ["top", "-b"]
+WORKDIR /app
+
+COPY 2048/ .
+
+CMD [ "node", "server.js" ]
